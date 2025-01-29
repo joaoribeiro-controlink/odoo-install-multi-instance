@@ -41,17 +41,17 @@ echo "Creating PostgreSQL user for Odoo..."
 sudo -u postgres psql -c "CREATE USER odoo WITH CREATEDB SUPERUSER PASSWORD '$DB_PASSWORD';"
 
 echo "Creating system user for Odoo..."
-sudo adduser --system --home=/odoo --group odoo18
+sudo adduser --system --home=/odoo --group odoo
 
 echo "Cloning Odoo 18 from GitHub..."
-sudo -u odoo18 -H git clone --depth 1 --branch master --single-branch https://www.github.com/odoo/odoo /odoo/
+sudo -u odoo -H git clone --depth 1 --branch master --single-branch https://www.github.com/odoo/odoo /odoo/
 
 echo "Creating Python virtual environment..."
-sudo -u odoo18 -H python3 -m venv /odoo/venv
+sudo -u odoo -H python3 -m venv /odoo/venv
 
 echo "Installing required Python packages..."
-sudo -u odoo18 -H /odoo/venv/bin/pip install wheel
-sudo -u odoo18 -H /odoo/venv/bin/pip install -r /odoo/requirements.txt
+sudo -u odoo -H /odoo/venv/bin/pip install wheel
+sudo -u odoo -H /odoo/venv/bin/pip install -r /odoo/requirements.txt
 
 echo "Installing wkhtmltopdf..."
 wget http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.0g-2ubuntu4_amd64.deb
