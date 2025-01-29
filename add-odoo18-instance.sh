@@ -19,7 +19,7 @@ set -e
 
 # Function to generate a random password
 generate_random_password() {
-    openssl rand -base64 16
+    tr -dc 'A-Za-z0-9!@#$%^&*()-_=+' </dev/urandom | head -c 16
 }
 
 # Base variables
