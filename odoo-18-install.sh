@@ -65,7 +65,7 @@ sudo apt-get install -y \
     libx11-6 \
     xfonts-75dpi \
     xfonts-base
-wget https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox_0.12.6-1.bionic_amd64.deb
-sudo dpkg -i wkhtmltox_0.12.6-1.bionic_amd64.deb
+wget https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6.1-3/wkhtmltox_0.12.6.1-3.jammy_amd64.deb
+sudo dpkg -i wkhtmltox_0.12.6.1-3.jammy_amd64.deb
 sudo chmod +x /usr/local/bin/wkhtmltopdf
 sudo chmod +x /usr/local/bin/wkhtmltoimage
